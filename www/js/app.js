@@ -20,7 +20,6 @@ angular.module('starter', ['ionic'])
 
 .controller('InventoryCtrl', function($scope){
     $scope.onItemDrop = function(item) {
-      debugger;
         $scope.inventoryList.splice($scope.inventoryList.indexOf(item), 1);
     };
     $scope.inventoryList = [
