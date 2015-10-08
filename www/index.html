@@ -25,9 +25,17 @@
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
+        <h1 class="title">Inventory</h1>
       </ion-header-bar>
-      <ion-content>
+      <ion-content ng-controller="InventoryCtrl">
+        <ion-list can-swipe="listCanSwipe" show-delete="shouldShowDelete">
+          <ion-item ng-repeat="item in inventoryList">
+            {{ item.name }}
+            <ion-delete-button class="ion-minus-circled"
+                               ng-click="onItemDrop(item)">
+            </ion-delete-button>
+          </ion-item>
+        </ion-list>
       </ion-content>
     </ion-pane>
   </body>
