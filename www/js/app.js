@@ -29,4 +29,15 @@ angular.module('starter', ['ionic'])
     ];
     $scope.listCanSwipe = true;
     $scope.shouldShowDelete = true;
+})
+
+.config(function($stateProvider, $urlRouterProvider) {
+  $stateProvider
+
+    .state('inventory',{
+      url: '/inventory',
+      templateUrl: 'templates/inventory.html'
+    })
+
+  $urlRouterProvider.otherwise('/inventory');
 });
